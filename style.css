@@ -1,0 +1,591 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+
+.header {
+  display: flex;               /* Включаем Flexbox */
+  align-items: center;         
+  justify-content: space-between;
+  padding: 10px 10%;          /* Отступы */
+  height: 50px;                /* Высота шапки */
+  background-color: #f0f0f0;   /* Цвет фона */
+}
+
+.header div {
+  display: flex;               
+  align-items: center;         
+  padding: 0 10px;             /* Внутренние отступы */
+}
+
+.header img {
+  height: 20px;                /* Высота иконки */
+  margin-right: 10px;          /* Отступ между иконкой и текстом */
+  object-fit: contain;         /* Масштабирование */
+}
+
+.header nav {
+  display: flex;               /* Flexbox для навигации */
+  align-items: center;         /* Вертикальное выравнивание */
+}
+
+
+.header_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+header h1, header h2 {
+    margin: 0;
+}
+
+header p {
+    margin: 10px 0 0;
+}
+
+
+.header_content_left {
+    float: left;
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.header_content_right {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.obvodka{
+    display: flex;
+    background-color: #6ec6f4;
+
+    padding: 20px 30px 20px 30px;
+    border-radius: 10px;
+    justify-content: space-between;
+    gap: 10%;
+    width: 940px;
+}
+.dkd {
+    display: flex;
+}
+
+
+.header_content_right2 {
+    height: 100px;
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.marquee-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 40px;
+  background-color: #64c4ff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.marquee-text {
+  white-space: nowrap;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+  position: absolute;
+  left: 100%;
+  animation: scroll-left 12s linear infinite;
+  transition: transform 0.8s ease, left 0.8s ease;
+}
+
+.marquee-text img {
+  vertical-align: middle;
+  margin-right: 10px;
+  height: 20px;
+}
+
+/* При наведении — остановка + перемещение в центр */
+.marquee-container:hover .marquee-text {
+  animation: none;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@keyframes scroll-left {
+  0% {
+    left: 100%;
+    transform: translateX(0%);
+  }
+  100% {
+    left: -100%;
+    transform: translateX(0%);
+  }
+}
+
+section {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.tehnikym, .abityrenty, .stybenty, .vipyskniky, .pedagogy {
+    background-color: #6ec6f4;
+    padding: 20px 30px 20px 30px;
+    border-radius: 10px;
+}
+
+.big_screen {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: rgb(255, 255, 255);
+}
+
+.screen {
+    height: 500px;
+    background-image: url('children.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 50px 30px 50px;
+    border-radius: 20px;
+}
+
+.screen h1 {
+    color: #fff;
+    font-size: 3rem;
+    height: 370px;
+}
+
+.screen_select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    gap: 5%;
+}
+
+.first_screen, .second_screen {
+    padding: 50px 50px 50px 50px;
+}
+.popular-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.popular-item {
+    background-color: #6ec6f4;
+    padding: 15px;
+    border-radius: 25px;
+}
+.popular-item img {
+    object-fit: cover;
+}
+.otstup {
+    margin-top: 15px;
+}
+p {
+    font-size: 1.5rem;
+}
+
+.carousel-section {
+  padding: 40px 0;
+}
+.carousel-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.carousel-wrapper {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 250px;
+  height: 200px;
+  flex-shrink: 0;
+  padding: 10px;
+  background-color: #64c4ff; /* голубой фон */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.carousel-item:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #64c4ff;
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.strawberry {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+}
+
+.strawberryscreen{
+    height: 370px;
+    background-image: url('strawberry.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 50px 30px 50px;
+    border-radius: 40px;
+    background-color: #6ec6f4;
+}
+
+.strawberry_left{
+    float: left;
+    padding: 20px;
+    width: 600px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+}
+.strawberry_right{
+    height: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.future-block {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .future-block h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .icons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+  }
+  
+  .icon-item img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .icon-item p {
+    margin: 0;
+    font-size: 25px;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .news-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .news-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .news-card {
+    background-color: #6ec6f4;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .news-card img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  
+  .news-card p {
+    margin: 0;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .partners-section {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .partners-wrapper {
+    position: relative;
+    background-color: #6ec6f4;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .partners-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+  }
+  
+  .partners-carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .partners-carousel img {
+    height: 100px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+  
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .scroll-btn.left {
+    left: 10px;
+  }
+  
+  .scroll-btn.right {
+    right: 10px;
+    
+  }
+  .footer {
+    background-color: #6ec6f4;
+    text-align: center;
+    padding: 20px 10px;
+    font-family: sans-serif;
+    color: #333;
+  }
+  
+  .footer h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2a2a2a;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  }
+  
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+  }
+  
+  .footer-nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* NEW STYLES */
+    /* NEW STYLES */
+      /* NEW STYLES */
+        /* NEW STYLES */
+          /* NEW STYLES */
+            /* NEW STYLES */
+
+  /* Кнопка-иконка */
+.auth-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Модальное окно */
+.auth-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right:0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.auth-modal.show {
+  display: flex;
+}
+
+.auth-modal-content {
+  background: #6ec6f4;
+  padding: 20px;
+  border-radius: 8px;
+  width: 320px;
+  position: relative;
+}
+
+/* Кнопка закрыть */
+.auth-close {
+  position: absolute;
+  top: 10px; right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Вкладки */
+.auth-tabs {
+  display: flex;
+  margin-bottom: 10px;
+}
+.auth-tab {
+  flex: 1;
+  padding: 8px;
+  background: #6fbeff;
+  border: none;
+  cursor: pointer;
+}
+.auth-tab--active {
+  background: #6ec6f4;
+  border-bottom: 2px solid #007bff;
+}
+
+/* Формы */
+.auth-form {
+  display: block;
+}
+.auth-form--hidden {
+  display: none;
+}
+.auth-form input {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.auth-form button {
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* Ошибки */
+.auth-error {
+  color: red;
+  margin-bottom: 8px;
+}
+
+/* Ссылки переключения */
+.auth-switch {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 8px;
+}
+.auth-switch-link {
+  color: #007bff;
+  cursor: pointer;
+}

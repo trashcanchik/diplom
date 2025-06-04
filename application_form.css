@@ -1,0 +1,174 @@
+/* ================================= */
+/* 1) ОБЩИЙ ГОЛУБОЙ ФОН СТРАНИЦЫ    */
+/* ================================= */
+/* Уберите эти строки, если фон уже задаётся в style2.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e6f7ff; /* светло-голубой фон */
+  }
+  
+  /* ================================= */
+  /* 2) Стили для карточки “Подать”    */
+  /* ================================= */
+  .apply-card {
+    background-color: #ffffff;
+    border: 2px solid #3399ff; /* ярко-голубая рамка */
+    border-radius: 8px;
+    width: 240px;
+    height: 180px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .apply-card:hover {
+    background-color: #e6f7ff;
+    transform: translateY(-4px);
+  }
+  
+  .card-title {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 12px;
+    color: #072f76;
+  }
+  
+  .card-icon img {
+    width: 48px;
+    height: auto;
+  }
+  
+  /* ================================= */
+  /* 3) Стили МОДАЛЬНОГО ОКНА (new)    */
+  /* ================================= */
+  .modal-overlay-new {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 51, 102, 0.7); /* полупрозрачный тёмно-синий */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+  }
+  
+  .modal-window-new {
+    position: relative;
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 600px;
+    padding: 24px 32px 32px 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  /* Крестик закрытия */
+  .modal-close-new {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+  }
+  
+  .modal-close-new:hover {
+    color: #000;
+  }
+  
+  /* Заголовок внутри модалки */
+  .modal-window-new h2 {
+    margin-top: 0;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #072f76;
+  }
+  
+  /* ================================= */
+  /* 4) Стили ПОЛЯ и СЕЛЕКТОРА         */
+  /* ================================= */
+  .modal-form-new {
+    font-size: 16px;
+    color: #222;
+  }
+  
+  .modal-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #222;
+  }
+  
+  /* Подготовим единый стиль для input и select */
+  .modal-input-new,
+  .modal-select-new {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 16px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .modal-input-new::placeholder {
+    color: #999;
+  }
+  
+  /* Скрываем блоки ОГЭ/ЕГЭ изначально */
+  .hidden-block-new {
+    display: none;
+    margin-bottom: 16px;
+  }
+  
+  /* ================================= */
+  /* 5) Стили для кнопки “Отправить”   */
+  /* ================================= */
+  .modal-submit-new {
+    width: 100%;
+    padding: 12px;
+    background-color: #3399ff;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .modal-submit-new:hover {
+    background-color: #287acc;
+  }
+  
+  /* ================================= */
+  /* 6) Адаптив для маленьких экранов  */
+  /* ================================= */
+  @media (max-width: 480px) {
+    .modal-window-new {
+      padding: 16px;
+    }
+    .modal-window-new h2 {
+      font-size: 22px;
+    }
+    .apply-card {
+      width: 200px;
+      height: 160px;
+    }
+    .card-title {
+      font-size: 16px;
+    }
+  }
+  

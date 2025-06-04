@@ -1,0 +1,469 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.header-wrapper {
+    background-color: #b8e5fd;
+    padding: 10px 0;
+  }
+.header {
+  display: flex;               /* Включаем Flexbox */
+  align-items: center;         
+  justify-content: space-between;
+  padding: 10px 10%;          /* Отступы */
+  height: 50px;                /* Высота шапки */
+  background-color: #e2f1ff;   /* Цвет фона */
+}
+
+.header div {
+  display: flex;               
+  align-items: center;         
+  padding: 0 10px;             /* Внутренние отступы */
+}
+
+.header img {
+  height: 20px;                /* Высота иконки */
+  margin-right: 10px;          /* Отступ между иконкой и текстом */
+  object-fit: contain;         /* Масштабирование */
+}
+
+.header nav {
+  display: flex;               /* Flexbox для навигации */
+  align-items: center;         /* Вертикальное выравнивание */
+}
+
+
+.header_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #def4fe;
+}
+
+header h1, header h2 {
+    margin: 0;
+}
+
+header p {
+    margin: 10px 0 0;
+}
+
+
+.header_content_left {
+    float: left;
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.header_content_right {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.obvodka{
+    display: flex;
+    background-color: #6ec6f4;
+
+    padding: 20px 30px 20px 30px;
+    border-radius: 10px;
+    justify-content: space-between;
+    gap: 10%;
+    width: 940px;
+}
+.dkd {
+    display: flex;
+}
+
+
+.header_content_right2 {
+    height: 100px;
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    justify-content: center;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff;
+  }
+  
+  
+  .section-title {
+    background-color: #64c4ff;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  section {
+    padding: 20px;
+    background-color: #fff;
+    max-width: 1300px; /* ширина для размещения 5 карточек */
+    margin: auto;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 карточек в строке */
+    gap: 15px;
+  }
+  
+  .card {
+    border: 2px solid #64c4ff;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 15px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-sizing: border-box;
+  }
+  
+  .card h3 {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.2em;
+    flex-grow: 1;
+  }
+  
+  .card p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0 0 0;
+  }
+  
+  .card span {
+    font-size: 20px;
+    color: #000;
+    align-self: flex-end;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+  }
+  
+  .card.active {
+    background-color: #64c4ff;
+    border-color: #000;
+  }
+  /* ОБЩАЯ ОБЁРТКА */
+.main-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ПОРЯДОК ПОДАЧИ ЗАЯВЛЕНИЙ */
+.apply-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.apply-text {
+  flex: 1 1 45%;
+}
+
+.apply-text h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.apply-text p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.apply-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.apply-card {
+  width: 220px;
+  height: 220px;
+  border: 2px solid #64c4ff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s;
+  box-sizing: border-box;
+}
+
+.apply-card:hover {
+  transform: scale(1.03);
+}
+
+.apply-card.light {
+  background-color: #fff;
+}
+
+.apply-card.dark {
+  background-color: #64c4ff;
+  border-color: #000;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-icon img {
+  width: 60px;
+  height: 60px;
+  margin: 10px auto;
+}
+
+.card-note {
+  font-size: 12px;
+  color: #333;
+}
+
+/* МЕСТО ПРИЁМА ДОКУМЕНТОВ */
+.location-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.location-text {
+  flex: 1 1 45%;
+}
+
+.location-text h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.location-text p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.location-table {
+  flex: 1 1 50%;
+}
+
+.location-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.location-table th {
+  background-color: #64c4ff;
+  padding: 12px;
+  border: 2px solid #000;
+  text-align: left;
+}
+
+.location-table td {
+  padding: 12px;
+  border: 1px solid #000;
+}
+.specialties-panel {
+  background-color: #e0f0ff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 998;
+}
+
+.modal-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f0faff;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 999;
+  width: 80%;
+  max-width: 600px;
+  display: none;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.modal-content .corp-btn {
+  width: 100%;
+  margin-bottom: 5px;
+  background-color: #64c4ff;
+  color: white;
+  padding: 10px;
+  border: none;
+  text-align: left;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content .spec-info {
+  display: none;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.close-btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: -10px;
+}
+/* =============================
+   Стили для "Мои заявления" модального окна
+   ============================= */
+
+/* Затемнённый фон (оверлей) */
+.apps-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;                /* центрируем child по flex */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;                /* поверх всего остального контента */
+}
+
+/* Окошко внутри оверлея */
+.apps-modal-window {
+  background-color: #bbe2fc;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: auto;               /* скролл, если контента много */
+  padding: 20px 30px 30px 30px; /* отступы внутри */
+}
+
+/* Кнопка "×" для закрытия */
+.apps-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  line-height: 1;
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+}
+.apps-modal-close:hover {
+  color: #000;
+}
+
+/* Индикатор загрузки */
+.apps-modal-loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  margin: 20px 0;
+}
+
+/* Если кнопка-ссылка ещё не определена в CSS, можно добавить: */
+.link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: #0077cc;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.link-button:hover {
+  color: #005fa3;
+}
+.hidden {
+  display: none;
+}
+
+.ajax-success-message {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #d4edda;  
+  color: #155724;             
+  border: 1px solid #c3e6cb; 
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.send-application-btn {
+  min-width: 200px;    
+  margin: 0 auto;      
+  display: block;  
+  background-color: #6dc1f9;      
+  color: #000000;                   
+  font-size: 16px;               
+  padding: 10px 20px;            
+  border: none;                  
+  border-radius: 4px;             
+  cursor: pointer;               
+  text-align: center;            
+}
+
+
+.send-application-btn:hover {
+  background-color: #4fc1fa;
+  color:#fff;      
+}
+
+
+.send-application-btn:focus {
+  outline: none;                  
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); 
+}
